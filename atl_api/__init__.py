@@ -4,22 +4,7 @@ import re
 from mcdreforged.api.all import *
 
 def on_load(server: PluginServerInterface, old):
-    server.logger.info("Loaded Another translate API.")
-    server.register_command(
-        Literal('!!atl')
-        .runs(
-            lambda src: src.reply(atl_help())
-        )
-    )
-    server.register_command(
-        Literal('!!atl_api:atl')
-        .runs(
-            lambda src: src.reply(atl_help())
-        )
-    )
-
-def atl_help():
-    return "Usage: [link]"
+    server.logger.info("Loaded AnotherTranslateAPI.")
 
 # 匹配翻译键名
 def parseKey(lang, content, fileEncoding='utf-8'):
