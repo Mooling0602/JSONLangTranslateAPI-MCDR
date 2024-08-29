@@ -7,7 +7,7 @@
 适用于解析json格式的任意语言文件，可方便对服务端输出的游戏log进行多语言翻译，无需提前注册翻译。
 
 ## 文档
-详见此页面。
+详见[此页面](https://github.com/Mooling0602/AnotherTranslateAPI-MCDR/blob/main/doc/usage.md)。
 
 ## 使用此API的项目
 - MCDR插件\[MSync\]DeathTips的必需依赖。
