@@ -11,7 +11,8 @@
 ## [代码参考](https://github.com/Mooling0602/AnotherTranslateAPI-MCDR/blob/0.0.1/example/example.py)
 1. 导入该API
 - `from atl_api import parseKey, parseValue, parseContent`
-2. 准备至少两个要用于翻译的游戏语言文件，分为`raw_lang`和`translated_lang`，并在代码内或通过插件配置设置其路径
+2. 准备至少两个要用于翻译的json格式的游戏语言文件，分为`raw_lang`和`translated_lang`，并在代码内或通过插件配置设置其路径
+> 你可以在游戏客户端或服务端内提取原版文件出来直接使用，也可以自己修改出一个定制的语言文件出来，注意当前限制即可
 3. 获取你要翻译的内容，保证其为单行的字符串，假设其为`raw_content`
 4. 【可选】对要翻译的内容（原文）进行预处理，避免解析错误，使用`content = parseContent(raw_content)`
 5. 获取译文，假设译文为`tr_content`，则`tr_content = parseValue(translated_lang, parseKey(raw_lang, content))`；或分为两步，先匹配原文对应的翻译键名称`key = parseKey(raw_lang, content)`，再匹配到译文内容`tr_content = parseValue(translated_lang, key)`
