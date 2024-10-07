@@ -1,14 +1,14 @@
 {
-	"id": "atl_api",
-	"version": "0.0.1",
-	"name": "AnotherTranslateAPI",
-	"description": {
-		"en_us": "Another translate API for MCDReforged. Just support json files with UTF-8 encode at present.",
-		"zh_cn": "新的翻译API，实现原文直转译文。目前仅支持UTF-8编码的json文件。"
-	},
-	"dependencies": {
-		"mcdreforged": ">=2.1.0"
-	},
-	"author": "Mooling0602",
-    "link": "https://github.com/Mooling0602/AnotherTranslateAPI-MCDR"
+    "id": "gtl_api",
+    "version": "0.0.1",
+    "name": "GamelangTranslateAPI",
+    "description": {
+        "en_us": "Translate API for game lang, just support json files.",
+        "zh_cn": "适用于游戏语言文件的翻译API，仅支持json文件。"
+    },
+    "dependencies": {
+        "mcdreforged": ">=2.1.0"
+    },
+    "author": "Mooling0602",
+    "link": "https://github.com/Mooling0602/GamelangTranslateAPI-MCDR"
 }
