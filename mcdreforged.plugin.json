@@ -1,7 +1,7 @@
 {
-    "id": "gtl_api",
-    "version": "0.0.1",
-    "name": "GamelangTranslateAPI",
+    "id": "jtl_api",
+    "version": "0.1.0",
+    "name": "JSONLangTranslateAPI",
     "description": {
         "en_us": "Translate API for game lang, just support json files.",
         "zh_cn": "适用于游戏语言文件的翻译API，仅支持json文件。"
@@ -10,5 +10,5 @@
         "mcdreforged": ">=2.1.0"
     },
     "author": "Mooling0602",
-    "link": "https://github.com/Mooling0602/GamelangTranslateAPI-MCDR"
+    "link": "https://github.com/Mooling0602/JSONLangTranslateAPI-MCDR"
 }

@@ -3,8 +3,8 @@ import re
 
 from mcdreforged.api.all import *
 
-def on_load(server: PluginServerInterface, old):
-    server.logger.info("Loaded Game lang translate API.")
+def on_load(server: PluginServerInterface, prev_module):
+    server.logger.info("Loaded JSON lang translate API.")
     server.logger.info("Mainly for VanillaGameEvents, but may be suitable to pack to pypi, if you're interested you can do it!")
 
 def parseKey(lang, content, fileEncoding='utf-8'):

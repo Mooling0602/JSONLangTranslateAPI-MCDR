@@ -1,20 +1,73 @@
-# 用法
-> 目前仅适用于MCDR插件
->
-> 提供的代码仅供参考，你可以自行根据实际情况进行修改
-> 
-## 当前限制
-- 准备的语言文件最好是原文和译文一一对应，否则可能无法正确翻译
-- 你需要自行处理因没有满足上一条而产生的各种报错
-- 有些文本会匹配到多条翻译键导致翻译出多个结果，你可能需要手动处理因此产生的错误
+<a id="jtl_api"></a>
 
-## [代码参考](https://github.com/Mooling0602/AnotherTranslateAPI-MCDR/blob/0.0.1/example/example.py)
-1. 导入该API
-- `from atl_api import parseKey, parseValue, parseContent`
-2. 准备至少两个要用于翻译的json格式的游戏语言文件，分为`raw_lang`和`translated_lang`，并在代码内或通过插件配置设置其路径
-> 你可以在游戏客户端或服务端内提取原版文件出来直接使用，也可以自己修改出一个定制的语言文件出来，注意当前限制即可
-3. 获取你要翻译的内容，保证其为单行的字符串，假设其为`raw_content`
-4. 【可选】对要翻译的内容（原文）进行预处理，避免解析错误，使用`content = parseContent(raw_content)`
-5. 获取译文，假设译文为`tr_content`，则`tr_content = parseValue(translated_lang, parseKey(raw_lang, content))`；或分为两步，先匹配原文对应的翻译键名称`key = parseKey(raw_lang, content)`，再匹配到译文内容`tr_content = parseValue(translated_lang, key)`
+# jtl\_api
 
+<a id="jtl_api.parseKey"></a>
 
+#### Import method:
+```python
+PLUGIN_METADATA = {
+    'dependencies': {
+        'mcdreforged': '>=2.1.0',
+        'jtl_api': '>=0.1.0'
+    }
+}
+
+import jtl_api
+```
+
+## parseKey
+
+```python
+def parseKey(lang, content, fileEncoding='utf-8'):
+```
+
+Find the key name for the given content in the specified language file.
+
+**Arguments**:
+
+- `file_path`: The path to the language file.
+- `content`: The content to search for.
+- `fileEncoding`: The encoding format of the file, default is 'utf-8'.
+
+**Returns**:
+
+The found key name, or None if not found.
+
+<a id="jtl_api.parseValue"></a>
+
+## parseValue
+
+```python
+def parseValue(lang, key, fileEncoding='utf-8'):
+```
+
+Retrieve the value from the specified language file based on the given key.
+
+**Arguments**:
+
+- `file_path`: The path to the language file.
+- `key`: The key name to search for.
+- `fileEncoding`: The encoding format of the file, default is 'utf-8'.
+
+**Returns**:
+
+The found value, or None if not found.
+
+<a id="jtl_api.parseContent"></a>
+
+## parseContent
+
+```python
+def parseContent(text):
+```
+
+Process the raw content by removing square brackets.
+
+**Arguments**:
+
+- `text`: The raw text.
+
+**Returns**:
+
+The processed text.
