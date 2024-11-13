@@ -7,9 +7,9 @@
 适用于解析json格式的任意语言文件，可方便对服务端输出的游戏log进行多语言翻译。
 
 ## 文档
-Hello my friends, doc part support English!
+Hello my friends, [doc](https://github.com/Mooling0602/JSONLangTranslateAPI-MCDR/blob/main/doc/usage.md) part support English!
 
-详见[doc]
+详见[doc](https://github.com/Mooling0602/JSONLangTranslateAPI-MCDR/blob/main/doc/usage_zh_cn.md)
 
 ## 使用此API的项目
 - 插件VanillaGameEvents的必需依赖（开发中）。
