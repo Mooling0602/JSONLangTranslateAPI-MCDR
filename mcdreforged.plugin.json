@@ -1,6 +1,6 @@
 {
     "id": "jtl_api",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "name": "JSONLangTranslateAPI",
     "description": {
         "en_us": "Translate API for game lang, just support json files.",
