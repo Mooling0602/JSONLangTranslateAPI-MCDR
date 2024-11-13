@@ -1,1 +1,1 @@
-zip -r "jsonlangTranslateAPI.mcdr" jtl_api mcdreforged.plugin.json
+zip -r "JSONLangTranslateAPI.mcdr" jtl_api mcdreforged.plugin.json
