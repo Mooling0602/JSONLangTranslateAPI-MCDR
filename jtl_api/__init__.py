@@ -1,4 +1,4 @@
-import json
+import json5
 import re
 
 from mcdreforged.api.all import *
@@ -18,7 +18,7 @@ def parseKey(lang, content, fileEncoding='utf-8'):
     """
     try:
         with open(lang, 'r', encoding=fileEncoding) as file:
-            data = json.load(file)
+            data = json5.load(file)
 
         def search_dict(d):
             for key, value in d.items():
@@ -37,7 +37,7 @@ def parseKey(lang, content, fileEncoding='utf-8'):
     except FileNotFoundError:
         print(f"File not exists: {lang}")
         return None
-    except json.JSONDecodeError:
+    except ValueError:
         print(f"Can't parse json file: {lang}")
         return None
 
@@ -52,13 +52,13 @@ def parseValue(lang, key, fileEncoding='utf-8'):
     """
     try:
         with open(lang, 'r', encoding=fileEncoding) as file:
-            data = json.load(file)
+            data = json5.load(file)
             value = data.get(key, None)
         return value
     except FileNotFoundError:
         print(f"File not exists: {lang}")
         return None
-    except json.JSONDecodeError:
+    except ValueError:
         print(f"Can't parse json file: {lang}")
         return None
 
