@@ -14,7 +14,7 @@ def lang_loader(lang, encoding='utf-8'):
     :param lang: The path to the language file
     :param encoding: The encoding format of the file, default is 'utf-8'.
     """
-    with open(lang, 'r', encoding) as file:
+    with open(lang, 'r', encoding=encoding) as file:
         lang = json5.load(file)
     return lang
 
