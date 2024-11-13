@@ -7,6 +7,8 @@
 适用于解析json格式的任意语言文件，可方便对服务端输出的游戏log进行多语言翻译。
 
 ## 文档
+Hello my friends, doc part support English!
+
 详见[doc]
 
 ## 使用此API的项目
